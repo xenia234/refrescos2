@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Xenia CSS</title>
+    <link rel="stylesheet" href="estilos.css"/>
+    <style>
+        body {
+            background-color: #D433FF;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background: #575757;
+        }
+        #content {
+            flex: 1;
+            padding: 20px;
+        }
+        .article {
+            margin-bottom: 20px;
+        }
+        aside {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer marquee {
+            background: #33FFD1;
+            color: #FF339F;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            #content, aside {
+                margin: 10px 0;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                padding: 5px 0;
+            }
+            nav ul li a {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <h1>Página de Xenia CSS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="index.html">Contacto</a>
+            </li>
+            <li>
+                <a href="index.html">Blog</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="clearfix"></div>
+    <section id="content">
+        <article class="article">
+            <h2>Coca Cola</h2>
+            <p>3 litros: $47.</p>
+            <p>1.75 ml: Sube de 29 a 31 pesos</p>
+            <p>2.25 Lt: Sube de 33 a 37</p>
+        </article>
+
+        <article class="article">
+            <h2>Pepsi</h2>
+            <p>Pepsi 2Lt - Pepsi. $24.00</p>
+            <p>Pepsi 3Lt - Pepsi. $31.50</p>
+            <p>Pepsi Light 600 Ml - Pepsi. $12.50</p>
+            <p>Pepsi Light 355Ml - Pepsi. $12.40</p>
+        </article>
+
+        <article class="article">
+            <h2>Fanta</h2>
+            <p>Fanta 3Lt - Fanta. $35.50</p>
+            <p>Fanta 600Ml - Fanta. $15.00</p>
+            <p>Fanta 355Ml - Fanta. $14.80</p>
+        </article>
+
+        <article class="article">
+            <h2>Sprite</h2>
+            <p>Refresco Sprite sabor lima-limón 600 ml $17.00</p>
+            <p>Refresco Sprite sabor lima-limón de 2 l $29.00</p>
+            <p>Refresco Sprite de 3 l $35.50</p>
+        </article>
+    </section>
+    
+    <aside>
+        <h2>Barra Lateral</h2>
+        <form>
+            <input type="text" placeholder="Buscar...">
+            <input type="submit" value="Buscar"/>
+        </form>
+    </aside>
+
+    <div class="clearfix"></div>
+
+    <footer>
+        <marquee behavior="alternate" direction="left">
+            <b>XeniaCB &copy; 2024</b>
+        </marquee>
+    </footer>
+</div>
+
+</body>
+</html>
